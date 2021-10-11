@@ -7,8 +7,8 @@ const readline = require('readline').createInterface({
   output: process.stdout
 });
 
-let channel_id = config.channel_id
-let server_id = config.server_id
+let channel_ids = config.channel_ids
+let server_ids = config.server_ids
 let public_servers = config.public_servers
 let public_channels = config.public_channels
 let blocked_users = blocked_allowed.blocked_users_id
@@ -32,12 +32,12 @@ client.on('message', message => {
           }
         } else if (public_servers == false) {
           if (public_channels == true) {
-            if (message.channel.id != channel_id) {
+            if (server_ids.includes(parseFloat(message.guild.id)) == true) {
               exec(message.content); 
             }
           } else if (public_channels == false) {
-            if (message.guild.id == server_id) {
-              if (message.channel.id == channel_id) {
+            if (server_ids.includes(parseFloat(message.guild.id)) == true) {
+              if (channel_ids.includes(parseFloat(message.channel.id)) == true) {
                 exec(message.content);
               }
             }
@@ -53,12 +53,12 @@ client.on('message', message => {
           }
         } else if (public_servers == false) {
           if (public_channels == true) {
-            if (message.channel.id != channel_id) {
+            if (server_ids.includes(parseFloat(message.guild.id)) == true) {
               exec(message.content); 
             }
           } else if (public_channels == false) {
-            if (message.guild.id == server_id) {
-              if (message.channel.id == channel_id) {
+            if (server_ids.includes(parseFloat(message.guild.id)) == true) {
+              if (channel_ids.includes(parseFloat(message.channel.id)) == true) {
                 exec(message.content);
               }
             }

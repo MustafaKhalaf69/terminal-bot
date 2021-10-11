@@ -1,7 +1,11 @@
 {
 	"token": "",
-	"server_id": "",
-	"channel_id": "",
+
+	"_exampe": "[759067952808591401, 484094807648763916]",
+
+	"server_ids": [],
+	"channel_ids": [],
+
 	"public_servers": true, 
 	"public_channels": true
 }
