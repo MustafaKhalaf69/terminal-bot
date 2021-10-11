@@ -22,7 +22,7 @@ function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout)
     return childfork.exec(cmd, handler);
 }
 client.on('ready', () => {
-  console.log('Ready to work\n`)
+  console.log('Ready to work\n')
 }):
 
 client.on('message', message => {
