@@ -15,6 +15,6 @@ Steps:
 
 6. put your bot token in the "token" variable in `config.json`
 
-7. modify `config.json` to your needs (server_id's for bot in "server_id", channel_id's for bot in "channel_id", make bot limited to some servers by changing "public_servers" to false, and limited to some channels by changing "public_channels" to false
+7. modify `config.json` to your needs (server_id's for bot in "server_ids", channel_id's for bot in "channel_ids", make bot limited to some servers by changing "public_servers" to false, and limited to some channels by changing "public_channels" to false
 
 8. node bot.js
