@@ -21,6 +21,9 @@ function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout)
     const childfork = require('child_process');
     return childfork.exec(cmd, handler);
 }
+client.on('ready', () => {
+  console.log('Ready to work\n`)
+}):
 
 client.on('message', message => {
   if (use_allowed_list == true) {
